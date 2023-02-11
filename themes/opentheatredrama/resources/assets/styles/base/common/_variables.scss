@@ -1,0 +1,66 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+$white: #fff !default;
+$gray-100: #f9f9f9 !default;
+$gray-200: #e2e2e2 !default;
+$gray-300: #9ca0a2 !default;
+$gray-400: #999 !default;
+$gray-500: #5f6264 !default;
+$black: #000 !default;
+
+$primary: #ffdc47 !default;
+$secondary: #05253c !default;
+$off-white: #fffef2 !default;
+$yellow: #ffce00 !default;
+
+$shade-light: #fffdea !default;
+$shade-dark: #f9f9f9 !default;
+
+$success-msg-color: #6d980d !default;
+$success-msg-color-two: #8dcc015b !default;
+$success-msg-bg: #b0ff005c !default;
+$error-msg-color: $white !default;
+$error-msg-bg: #ff004b !default;
+
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+);
+
+//Font families
+$font-family-manrope: "Manrope", sans-serif !default;
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1472px,
+) !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-gutter-width: 72px !default;
+
+//image paths
+$image-base-path: "../../../images/";
+
+$button-arrow: "#{$image-base-path}button-arrow.svg";
+$button-arrow-hover: "#{$image-base-path}button-arrow-hover.svg";
+$button-arrow-grey: "#{$image-base-path}button-arrow-grey.svg";

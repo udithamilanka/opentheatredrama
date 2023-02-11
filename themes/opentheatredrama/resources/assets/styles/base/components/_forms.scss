@@ -1,0 +1,25 @@
+// Text CSS
+@import "./form/text";
+// Textarea CSS
+@import "./form/textarea";
+// Dropdown CSS
+@import "./form/dropdown";
+// Checkbox CSS
+@import "./form/checkbox";
+// Radio CSS
+@import "./form/radio";
+
+/** Search form */
+form {
+  label {
+    font-size: 18px;
+    line-height: 32px;
+    display: block;
+    margin-bottom: 10px;
+
+    &.checkbox,
+    &.radio {
+      line-height: 24px;
+    }
+  }
+}

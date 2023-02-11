@@ -1,0 +1,8 @@
+@mixin custom-transition($attr...) {
+  will-change: $attr;
+  -webkit-transition: $attr 0.15s ease-in-out;
+  -moz-transition: $attr 0.15s ease-in-out;
+  -ms-transition: $attr 0.15s ease-in-out;
+  -o-transition: $attr 0.15s ease-in-out;
+  transition: $attr 0.15s ease-in-out;
+}

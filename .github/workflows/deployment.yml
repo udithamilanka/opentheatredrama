@@ -1,0 +1,31 @@
+name: Build
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: actions/setup-node@v2
+      with:
+        version: 16.x
+
+    - name: Deploying to Server
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.DEPLOY_HOST }}
+        username: ${{ secrets.DEPLOY_USER }}
+        key: ${{ secrets.DEPLOY_KEY }}
+        port: ${{ secrets.DEPLOY_PORT }}
+        script: |
+            cd /var/www/roots.smashy.space/public/wp-content/
+            git pull
+            sudo chown -R deploy-roots:group-roots /var/www/roots.smashy.space/
+            sudo find /var/www/roots.smashy.space/public/ -type d -exec chmod a+rwx,o-rwx,ug+s {} +
+            sudo rm -r /var/www/roots.smashy.space/public/wp-content/uploads/cache 
+            sudo systemctl restart httpd

@@ -1,0 +1,17 @@
+.banner-section {
+  height: 667px;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  background-color: $gray-400;
+
+  @include media-breakpoint-up(lg) {
+    height: 90vh;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    max-height: 1150px;
+  }
+}

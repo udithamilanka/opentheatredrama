@@ -1,0 +1,120 @@
+// Typography css
+h1 {
+  color: $white;
+  font-size: 38px;
+  line-height: 48px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 52px;
+    line-height: 62px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 56px;
+    line-height: 72px;
+  }
+}
+
+h2 {
+  font-size: 26px;
+  line-height: 40px;
+
+  &.yellow {
+    color: $primary;
+  }
+
+  &.blue {
+    color: $secondary;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 48px;
+    line-height: 60px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 36px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 40px;
+    line-height: 60px;
+  }
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 36px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 28px;
+
+  &.yellow {
+    color: $primary;
+  }
+
+  &.blue {
+    color: $secondary;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 600;
+}
+
+p {
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 400;
+
+  strong {
+    font-weight: 700;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 16px;
+    line-height: 36px;
+  }
+}

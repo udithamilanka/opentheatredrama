@@ -1,0 +1,151 @@
+/* stylelint-disable */
+.banner .nav li {
+  @extend .nav-item;
+}
+
+.banner .nav a {
+  @extend .nav-link;
+}
+
+.header {
+  .sticky-header & {
+    position: sticky;
+    bottom: auto;
+    top: 0;
+    background: $secondary;
+    z-index: 2;
+  }
+
+  .header-container {
+    margin: 0 auto;
+    padding: 39px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo-wrp {
+      img {
+        width: 100px;
+
+        &.default {
+          .sticky-header & {
+            display: none;
+          }
+        }
+
+        &.sticky {
+          display: none;
+
+          .sticky-header & {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .nav-with-button {
+      .nav-primary {
+        .menu-main-menu-container {
+          ul {
+            display: flex;
+            align-items: center;
+
+            li {
+              margin: 0 20px;
+              position: relative;
+              padding: 20px 0;
+
+              &:first-child {
+                margin-left: 0;
+              }
+
+              a:not(.sub-menu a){
+                text-decoration: none;
+                font-size: 20px;
+
+                .sticky-header & {
+                  color: $white;
+                }
+              }
+
+              &:last-child {
+                margin-right: 0;
+
+                a:not(.sub-menu a) {
+                  color: $white;
+                }
+
+                &:hover {
+                  a:not(.sub-menu a) {
+                    color: $secondary;
+                  }
+                }
+              }
+
+              &.nav-btn {
+                padding: 9px 35px;
+                font-size: 16px;
+
+                .sticky-header & {
+                  background: $secondary;
+                  border: 1px solid $primary;
+                }
+
+                &:hover {
+                  .sticky-header & {
+                    background: $primary;
+                  }
+                }
+
+                a {
+                  .sticky-header & {
+                    color: $primary;
+                  }
+
+                  &:hover {
+                    .sticky-header & {
+                      color: $secondary;
+                    }
+                  }
+                }
+              }
+
+              .sub-menu {
+                max-width: 228px;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background: $white;
+                box-shadow: 0 10px 40px #0000000d;
+                padding: 20px 27px;
+                border-radius: 2px;
+                display: none;
+                z-index: 2;
+
+                li {
+                  list-style: none;
+                  margin: 0;
+                  text-align: left;
+                  width: 100%;
+                  padding: 0;
+
+                  a {
+                    font-size: 16px;
+                    text-decoration: none;
+                  }
+                }
+              }
+
+              &:hover {
+                .sub-menu {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
